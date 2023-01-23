@@ -50,10 +50,7 @@ while($numb != 0){
 
 
 
-    echo $avarage.' vidurkis <br>';
 
-        echo $min.' min temp <br>' ;
-        echo $max.' max temp <br>' ;
     fclose($file);
     }
 ?>
@@ -107,8 +104,9 @@ while($numb != 0){
                     <button class="btn btn-success mt-4" name="data" value="1">Tikrinti orus</button>
 
                     </div>
-                <?= (($min > 0 || $max > 0 || $avarage > 0)?'<h5 class="text-warning> Aukščiausia temperatūra '.$max.' Žemiausia temperatūra '.$min.' Temperatūrų vidurkis'.$avarage.'</h5>':"") ?>
-
+                <h5 class="text-warning text-center">
+                <?= ($min > 0 || $max > 0 || $avarage > 0)?' Aukščiausia temperatūra '.$max.' Žemiausia temperatūra '.$min.' Temperatūrų vidurkis '.$avarage:"" ?>
+</h5>
             </div>
             </form>
 
